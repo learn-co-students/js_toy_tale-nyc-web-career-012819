@@ -10,7 +10,7 @@ Help Andy recover their toys and get the toys back in the toy collection.
 All of the toy data is stored in the db.json file. You'll want to access this data using a json server. In order to do this, run the following two commands:
    * npm install -g json-server
    * json-server --watch db.json
-   
+
 ##### This will create a server storing all of our lost toy data with restful routes at http://localhost:3000/toys.
 You can also check out http://localhost:3000/toys/:id
 
@@ -42,7 +42,7 @@ After all if that - the toy card should resemble:
 ## STEP 4: Add a new toy!
 
 * When a user clicks on the add new toy button - a POST request is sent to http://localhost:3000/toys and the new toy is added to Andy's Toy Collection.
-* The toy should conditionally render to the page.
+* The toy should optimistically/conditionally render to the page.
 * An example toy to add:
 
 ```
@@ -58,3 +58,12 @@ After all if that - the toy card should resemble:
 When a user clicks on a toy's like button, two things should happen:
   * Conditionally increase the toy's like count
   * Send a patch request to the server at http://localhost:3000/toys/:id updating the number of likes that the specific toy has
+
+
+
+
+
+
+
+
+<!--  -->
