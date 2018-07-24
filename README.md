@@ -7,10 +7,10 @@ Help Andy recover their toys and get the toys back in the toy collection.
 
 ## STEP 1: Create your server!
 
-All of the toy data is stored in the db.json file. You'll want to access this data using a json server. In order to do this, run the following two commands: 
+All of the toy data is stored in the db.json file. You'll want to access this data using a json server. In order to do this, run the following two commands:
    * npm install -g json-server
    * json-server --watch db.json
-   
+
 ##### This will create a server storing all of our lost toy data with restful routes at http://localhost:3000/toys.
 You can also check out http://localhost:3000/toys/:id
 
@@ -20,7 +20,7 @@ On the index.html page, there is a div with the id "toy-collection"
 
 When the page loads, make a 'GET' request to fetch all the toy objects. With the response data, make a `<div class="card">` for each toy and add it to the toy-collection div.
 
-## STEP 3: Add toy info the the card!
+## STEP 3: Add toy info to the card!
 
 Each card should have the following child elements:
   * h2 tag with the toy's name

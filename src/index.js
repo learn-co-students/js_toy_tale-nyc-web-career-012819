@@ -1,22 +1,15 @@
-// YOUR CODE HERE
-// all the elements needed
 const addBtn = document.querySelector('#new-toy-btn')
-const toyCollection = document.querySelector("#toy-collection")
-const toyUrl = 'http://localhost:3000/toys'
-let addToy = false
 const toyForm = document.querySelector('.container')
-const inputs = document.querySelectorAll('.input-text')
-const submitForm = document.querySelector('.add-toy-form')
-let flash = {}
+let addToy = false
 
-document.addEventListener("DOMContentLoaded", init)
+// YOUR CODE HERE
 
 addBtn.addEventListener('click', () => {
   // hide & seek with the form
   addToy = !addToy
   if (addToy) {
     toyForm.style.display = 'block'
-    submitForm.addEventListener('submit', getToyData)
+    // submit listener here
   } else {
     toyForm.style.display = 'none'
   }
