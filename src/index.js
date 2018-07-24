@@ -24,6 +24,7 @@ addBtn.addEventListener('click', () => {
 
 function init(){
   getToys()
+  addClicksToLikes()
 }
 
 // STEP 2
@@ -34,7 +35,6 @@ function getToys(){
     json.forEach(toy => {
       makeToy(toy)
     })
-    addClicksToLikes()
   })
 }
 
@@ -98,19 +98,18 @@ function createNewToy(data) {
 
 
 // STEP 5
-
-function addClicksToLikes() {
-  // adds listeners to like buttons
-  const likes = document.getElementsByClassName('like-btn')
-    for (btn of likes) {
-      btn.addEventListener('click', (e) => {
-        // conditionally render the like number
-        let likeNum = e.target.previousElementSibling
-        likeNum.innerText = parseInt(likeNum.innerText) + 1
-        likeToy(e.target.dataset.id, parseInt(likeNum.innerText)).then(console.log)
-      })
+function addClicksToLikes(){
+  document.addEventListener('click', (e) => {
+    // conditionally render the like number
+    if (e.target.className === "like-btn") {
+      let likeNum = e.target.previousElementSibling
+      likeNum.innerText = parseInt(likeNum.innerText) + 1
+      likeToy(e.target.dataset.id, parseInt(likeNum.innerText)).then(console.log)
     }
+  })
 }
+
+
 
 
 function likeToy(toyId, data) {
