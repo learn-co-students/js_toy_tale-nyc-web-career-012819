@@ -94,8 +94,6 @@ toyCollectionDiv.addEventListener('click', event => {
   }
 })
 
-let displayLikes = document.createElement('p');
-
 function increaseLikes(foundToy) {
   fetch(`http://localhost:3000/toys/${foundToy.id}`, {
     method: "PATCH",
