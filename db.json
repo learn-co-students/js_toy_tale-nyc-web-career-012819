@@ -47,6 +47,24 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Furby",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/515Hv4-U-gL._SX425_.jpg",
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": "barbie",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_2865ba86-1f75-4e8e-b2fd-81c8e9695eed?wid=488&hei=488&fmt=pjpeg",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "name": "creepy doll",
+      "image": "https://partycity6.scene7.com/is/image/PartyCity/_pdp_sq_?$_1000x1000_$&$product=PartyCity/793117",
+      "likes": 0,
+      "id": 14
     }
   ]
 }
