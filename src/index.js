@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  function displayToys(){
     fetch(API_URL)
     .then(function(resp){
       // resp in this case is the response from the server
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // toys is an array that is taken from the promise object that came in the response
       renderAll(toys);
     })
-  }
+
 
 
   addBtn.addEventListener('click', () => {
@@ -99,6 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     } else if (e.target.className === "delete-btn"){
         let id = parseInt(e.target.dataset.id);
+        //parent holds the parent node of the button
+        let parent = event.target.parentNode;
+        // this removes the parent which is the current card.
+        parent.remove();
 
         fetch(`${API_URL}/${id}`, {
           method: 'DELETE',
@@ -106,15 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Content-Type": "application/json"
           }
         })
-        .then(function(resp){
-          return resp.json()
-        })
-        .then(data => {
-          displayToys();
-        })
     }
   })
-
-displayToys();
 
 })
