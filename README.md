@@ -62,6 +62,7 @@ body:
 ```
 
 * For examples, refer to the [documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Supplying_request_options).
+* If you could use help with developing a process, check this [blog post](https://medium.com/@sylwiavargas/build-a-crud-js-app-with-fetches-f82143a48b6d).
 
 ## STEP 5: Increase toy's likes!
 
